@@ -123,4 +123,21 @@ class TestBooksCollector:
         collector.add_book_in_favorites('Псоглавцы')
         collector.add_new_book('Воскремение')
 
-        assert len(collector.get_list_of_favorites_books()) == 2
+        assert collector.get_list_of_favorites_books() == ['Колыбель для кошки', 'Псоглавцы']
+
+    def test_get_books_genre_return_right_dictionary(self):
+        collector = BooksCollector()
+
+        collector.add_new_book('Война миров')
+        collector.set_book_genre('Война миров', 'Фантастика')
+        collector.add_new_book('Дюна')
+
+        assert collector.get_books_genre() == {'Война миров': 'Фантастика', 'Дюна': ''}
+
+    def test_get_book_genre_return_right_genre(self):
+        collector = BooksCollector()
+
+        collector.add_new_book('Убийство в Восточном экспрессе')
+        collector.set_book_genre('Убийство в Восточном экспрессе', 'Детективы')
+
+        assert collector.get_book_genre('Убийство в Восточном экспрессе') == 'Детективы'

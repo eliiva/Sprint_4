@@ -12,3 +12,5 @@ test_add_book_in_favorites_book_uknown_book_not_added - проверка неу�
 test_add_book_in_favorites_book_repeated_name_book_not_added - проверка неуспешного добавления книги в избранное методом add_book_in_favorites, когда книга с указанным названием уже есть в списке
 test_delete_book_from_favorites_book_deleted - проверка успешного удаления книги из избранного методом delete_book_from_favorites
 test_get_list_of_favorites_books_return_right_list - проверка успешного получения списка избранных книг методом get_list_of_favorites_books
+test_get_books_genre_return_right_dictionary - проверка успешного получения словаря books_genre методом get_books_genre
+test_get_book_genre_return_right_genre - проверка успешного получения жанра книги по названию методом get_book_genre
